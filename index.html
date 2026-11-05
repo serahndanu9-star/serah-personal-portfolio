@@ -1,389 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Welcome to Serah's personal portfolio. Explore my profile, skills and web development projects.">
-
+    <meta name="description" content="Welcome to Serah's personal portfolio. Explore my skills, projects and web development journey.">
     <title>Serah | Personal Portfolio</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- =================================
-         NAVIGATION BAR
-    ================================== -->
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Serah<span>.</span></div>
 
-    <header class="navbar">
-
-        <div class="logo">
-            Serah<span>.</span>
-        </div>
-
-        <nav class="nav-links">
-
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-
     </header>
 
-
-    <!-- =================================
-         HOME / HERO SECTION
-    ================================== -->
-
+    <!-- HOME SECTION -->
     <section class="hero" id="home">
 
         <div class="hero-content">
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
 
-            <div class="welcome">
-                WELCOME TO MY PORTFOLIO
-            </div>
+            <h1>Hello, I'm <span>Serah!</span></h1>
 
-            <h1>
-                Hello, I'm <span>Serah!</span>
-            </h1>
-
-            <h2>
-                Aspiring Web Developer
-            </h2>
+            <h2>Aspiring Web Developer</h2>
 
             <p>
-                Welcome to my personal space on the web!
-                I am passionate about technology, creativity
-                and learning new skills. I enjoy creating
-                beautiful and interactive websites while
-                continuously growing as a developer.
+                I am passionate about technology, creativity and learning
+                new things. Welcome to my little corner of the internet
+                where I showcase my skills, projects and journey in web development.
             </p>
 
-            <a href="#about" class="btn">
-                Discover More
-            </a>
-
+            <a href="#about" class="hero-button">Discover More</a>
         </div>
-
 
         <div class="hero-image">
-
-            <img
-                src="images/serah.jpg.jpeg"
-                alt="Serah's profile picture"
-            >
-
+            <img src="images/serah.jpg.jpeg" alt="Serah's profile picture">
         </div>
 
     </section>
 
+    <!-- ABOUT SECTION -->
+    <section class="section about" id="about">
 
-    <!-- =================================
-         ABOUT SECTION
-    ================================== -->
-
-    <section class="section" id="about">
-
-        <p class="section-tag">
-            GET TO KNOW ME
-        </p>
-
-        <h2>
-            About <span>Me</span>
-        </h2>
+        <h2 class="section-title">About <span>Me</span></h2>
 
         <div class="about-content">
-
-            <h3>Hello, welcome to my world!</h3>
-
             <p>
-                My name is Serah. I am an aspiring web developer
-                with a passion for technology and creativity.
-                I enjoy exploring the world of web development
-                and discovering new ways to bring ideas to life.
+                Hello! My name is Serah. I am an aspiring web developer
+                with a passion for creating beautiful and functional websites.
             </p>
 
             <p>
-                My journey started with learning the basics
-                of HTML, CSS and JavaScript. Since then,
-                I have continued improving my coding skills
-                by creating personal projects and experimenting
-                with different website designs.
+                My web development journey involves learning HTML,
+                CSS and JavaScript. I enjoy exploring new ideas,
+                solving problems and turning creativity into reality
+                through coding.
             </p>
 
             <p>
-                My goal is to become a skilled developer,
-                build meaningful digital experiences and
-                continue learning every day.
+                Every project is an opportunity to learn, improve
+                and become a better developer.
             </p>
-
         </div>
 
     </section>
 
+    <!-- SKILLS SECTION -->
+    <section class="section skills" id="skills">
 
-    <!-- =================================
-         SKILLS SECTION
-    ================================== -->
-
-    <section class="section" id="skills">
-
-        <p class="section-tag">
-            WHAT I CAN DO
-        </p>
-
-        <h2>
-            My <span>Skills</span>
-        </h2>
+        <h2 class="section-title">My <span>Skills</span></h2>
 
         <div class="skills-container">
 
             <div class="skill-card">
-
-                <h3>HTML</h3>
-
-                <p>
-                    Creating the structure and content
-                    of web pages using HTML.
-                </p>
-
+                <h3>HTML5</h3>
+                <p>Creating the structure and content of websites.</p>
             </div>
 
-
             <div class="skill-card">
-
-                <h3>CSS</h3>
-
-                <p>
-                    Designing beautiful websites using
-                    colours, layouts and responsive styling.
-                </p>
-
+                <h3>CSS3</h3>
+                <p>Designing beautiful, responsive and attractive websites.</p>
             </div>
 
-
             <div class="skill-card">
-
                 <h3>JavaScript</h3>
-
-                <p>
-                    Adding interactivity and functionality
-                    to websites using JavaScript.
-                </p>
-
+                <p>Adding interactivity and functionality to websites.</p>
             </div>
 
-
             <div class="skill-card">
-
                 <h3>Web Design</h3>
-
-                <p>
-                    Exploring creative website layouts
-                    and improving user experiences.
-                </p>
-
+                <p>Exploring creativity and building user-friendly designs.</p>
             </div>
 
         </div>
 
     </section>
 
+    <!-- PROJECTS SECTION -->
+    <section class="section projects" id="projects">
 
-    <!-- =================================
-         PROJECTS SECTION
-    ================================== -->
+        <h2 class="section-title">My <span>Projects</span></h2>
 
-    <section class="section" id="projects">
-
-        <p class="section-tag">
-            MY WORK
+        <p class="section-intro">
+            Here are some of the projects I have worked on during
+            my web development journey.
         </p>
-
-        <h2>
-            My <span>Projects</span>
-        </h2>
-
-        <p class="projects-intro">
-            Every project is a new opportunity to learn,
-            create and grow as a developer.
-        </p>
-
 
         <div class="projects-container">
 
-
-            <!-- FIRST PROJECT -->
-
+            <!-- PROJECT ONE -->
             <div class="project-card">
 
-                <div class="project-icon">
-                    💻
-                </div>
-
-                <h3>
-                    Personal Simple Website
-                </h3>
+                <h3>Personal Simple Website</h3>
 
                 <p>
-                    My first web development project,
-                    created as a beginner assignment.
-                    It showcases my personal profile
-                    and contact information.
+                    This was one of my first web development projects,
+                    created as a beginner assignment. It introduced me
+                    to building a personal website using HTML, CSS
+                    and JavaScript.
                 </p>
 
-                <div class="project-tech">
-
+                <div class="project-tags">
                     <span>HTML</span>
                     <span>CSS</span>
                     <span>JavaScript</span>
-
                 </div>
 
                 <a
                     href="https://github.com/serahndanu9-star/personalsimple-website"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     class="project-button"
-                >
-                    View on GitHub ↗
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    View Project
                 </a>
 
             </div>
 
-
-            <!-- SECOND PROJECT -->
-
+            <!-- PROJECT TWO -->
             <div class="project-card">
 
-                <div class="project-icon">
-                    🌸
-                </div>
-
-                <h3>
-                    Serah's Personal Portfolio
-                </h3>
+                <h3>Serah's Personal Portfolio</h3>
 
                 <p>
-                    My current personal portfolio,
-                    designed to showcase my profile,
-                    technical skills, projects and
-                    web development journey.
+                    My personal portfolio website, designed and developed
+                    to showcase my introduction, skills, projects and
+                    growing journey as a web developer.
                 </p>
 
-                <div class="project-tech">
-
+                <div class="project-tags">
                     <span>HTML</span>
                     <span>CSS</span>
                     <span>JavaScript</span>
-
                 </div>
 
-                <span class="project-status">
-                    Currently developing
-                </span>
+                <a
+                    href="https://serahndanu9-star.github.io/serah-personal-portfolio/"
+                    class="project-button"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    View Live Website
+                </a>
 
             </div>
 
-
         </div>
 
-
         <!-- GITHUB PROFILE -->
-
         <div class="github-profile">
 
+            <h3>Explore My GitHub</h3>
+
             <p>
-                Want to explore more of my work?
+                Follow my coding journey and explore more of my projects.
             </p>
 
             <a
                 href="https://github.com/serahndanu9-star"
-                target="_blank"
-                rel="noopener noreferrer"
                 class="github-button"
-            >
-                <span>⌘</span>
-                Visit My GitHub Profile
+                target="_blank"
+                rel="noopener noreferrer">
+                Visit My GitHub
             </a>
 
         </div>
 
     </section>
 
+    <!-- CONTACT SECTION -->
+    <section class="section contact" id="contact">
 
-    <!-- =================================
-         CONTACT SECTION
-    ================================== -->
+        <h2 class="section-title">Contact <span>Me</span></h2>
 
-    <section class="section" id="contact">
-
-        <p class="section-tag">
-            LET'S CONNECT
+        <p>
+            Have a question, an idea or an opportunity?
+            I would love to hear from you!
         </p>
 
-        <h2>
-            Contact <span>Me</span>
-        </h2>
+        <a
+            href="mailto:serahndanu9@gmail.com"
+            class="contact-button">
+            Send Me an Email
+        </a>
 
-        <div class="contact-content">
-
-            <h3>Let's create something amazing!</h3>
-
-            <p>
-                Thank you for visiting my portfolio.
-                I would love to connect, share ideas
-                and explore new opportunities.
-                Feel free to reach out through email.
-            </p>
-
-            <a
-                href="mailto:serahndanu9@gmail.com"
-                class="contact-button"
-            >
-                Send Me an Email
-            </a>
-
-            <p class="email-address">
-                serahndanu9@gmail.com
-            </p>
-
-        </div>
+        <p class="email">
+            serahndanu9@gmail.com
+        </p>
 
     </section>
 
-
-    <!-- =================================
-         FOOTER
-    ================================== -->
-
-    <footer>
+    <!-- FOOTER -->
+    <footer class="footer">
 
         <p>
-            © 2026 Serah. All Rights Reserved.
+            &copy; 2026 Serah's Personal Portfolio.
+            All Rights Reserved.
         </p>
 
-        <p>
-            Designed with ❤️ and creativity.
-        </p>
-
-        <p>
-            Keep Learning. Keep Creating. Keep Growing.
-        </p>
+        <p>Designed and developed with ❤️ by Serah.</p>
 
     </footer>
 
-
     <!-- JAVASCRIPT -->
-
     <script src="script.js"></script>
 
 </body>
-
 </html>
