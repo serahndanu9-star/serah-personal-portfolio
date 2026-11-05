@@ -1,0 +1,739 @@
+/* =========================================
+   SERAH'S PERSONAL PORTFOLIO
+   PREMIUM PINK & GOLD EDITION
+   VERSION 3.0
+========================================= */
+
+
+/* =========================================
+   1. GENERAL SETTINGS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --pink: #e99aaf;
+    --light-pink: #ffdce5;
+    --gold: #d6ad68;
+    --dark: #17131a;
+    --card: #2a202b;
+    --white: #ffffff;
+}
+
+html {
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--dark);
+    color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+::selection {
+    background: var(--pink);
+    color: var(--dark);
+}
+
+
+/* =========================================
+   2. NAVIGATION BAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    padding: 22px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(16, 14, 19, 0.95);
+    border-bottom: 1px solid #d6ad6860;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    transition: 0.4s ease;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--pink);
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.logo:hover {
+    color: var(--gold);
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--pink);
+    left: 0;
+    bottom: -7px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--pink);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   3. HOME / HERO SECTION
+========================================= */
+
+.hero {
+    min-height: 85vh;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            #503044,
+            transparent 40%
+        ),
+        linear-gradient(
+            120deg,
+            #17131a,
+            #302332
+        );
+}
+
+.hero-content {
+    max-width: 650px;
+    animation: slideInLeft 1s ease forwards;
+}
+
+.welcome {
+    color: var(--pink);
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 35px;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 60px);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: var(--pink);
+    text-shadow: 0 0 20px #e99aaf60;
+}
+
+.hero h2 {
+    color: var(--gold);
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    line-height: 1.9;
+    color: #dddddd;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   4. BUTTONS
+========================================= */
+
+.btn,
+.contact-button {
+    display: inline-block;
+    padding: 15px 32px;
+    border-radius: 35px;
+    text-decoration: none;
+    color: #211922;
+
+    background: linear-gradient(
+        90deg,
+        var(--pink),
+        var(--gold)
+    );
+
+    font-weight: bold;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.btn:hover,
+.contact-button:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 8px 30px #d6ad6870;
+}
+
+
+/* =========================================
+   5. PROFILE IMAGE
+========================================= */
+
+.hero-image {
+    width: 290px;
+    height: 290px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    padding: 7px;
+
+    background: linear-gradient(
+        135deg,
+        var(--pink),
+        var(--gold),
+        var(--pink)
+    );
+
+    box-shadow:
+        0 0 25px #d6ad6880,
+        0 0 50px #e99aaf30;
+
+    overflow: hidden;
+    animation: floatImage 4s ease-in-out infinite;
+    transition: 0.4s;
+}
+
+.hero-image:hover {
+    box-shadow: 0 0 40px #e99aaf90;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--dark);
+}
+
+
+/* =========================================
+   6. GENERAL SECTION STYLING
+========================================= */
+
+.section {
+    padding: 100px 8%;
+    text-align: center;
+    background: var(--dark);
+    color: var(--white);
+    position: relative;
+}
+
+.section:nth-of-type(even) {
+    background: #211922;
+}
+
+.section h2 {
+    font-size: 38px;
+    margin-bottom: 35px;
+}
+
+.section h2 span {
+    color: var(--pink);
+    text-shadow: 0 0 15px #e99aaf40;
+}
+
+.section-tag {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   7. ABOUT SECTION
+========================================= */
+
+.about-content {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.9;
+}
+
+.about-content h3 {
+    color: var(--pink);
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #dddddd;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   8. SKILLS SECTION
+========================================= */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skill-card {
+    padding: 35px 18px;
+    border: 1px solid #d6ad6860;
+    border-radius: 18px;
+
+    background: linear-gradient(
+        145deg,
+        #302332,
+        #211922
+    );
+
+    transition: 0.4s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--pink);
+    box-shadow: 0 10px 30px #e99aaf35;
+}
+
+.skill-card h3 {
+    color: var(--pink);
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    color: #dddddd;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   9. PROJECTS SECTION
+========================================= */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.projects-intro {
+    max-width: 600px;
+    margin: -15px auto 40px;
+    color: #dddddd;
+    line-height: 1.8;
+}
+
+.project-card {
+    padding: 35px 22px;
+
+    background: linear-gradient(
+        145deg,
+        #302332,
+        #211922
+    );
+
+    border: 1px solid #d6ad6860;
+    border-radius: 18px;
+
+    transition: 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--pink);
+    box-shadow: 0 10px 30px #e99aaf40;
+}
+
+.project-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    color: var(--pink);
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+.project-card p {
+    color: #dddddd;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.project-tech {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.project-tech span {
+    padding: 6px 13px;
+    border-radius: 20px;
+    background: #e99aaf20;
+    border: 1px solid var(--pink);
+    color: var(--light-pink);
+    font-size: 12px;
+}
+
+.project-button,
+.github-button {
+    display: inline-block;
+    padding: 12px 22px;
+    margin-top: 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #211922;
+
+    background: linear-gradient(
+        90deg,
+        var(--pink),
+        var(--gold)
+    );
+
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.project-button:hover,
+.github-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px #e99aaf70;
+}
+
+.project-status {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    border: 1px solid var(--gold);
+    border-radius: 20px;
+    color: var(--gold);
+    font-size: 13px;
+}
+
+
+/* =========================================
+   10. GITHUB PROFILE
+========================================= */
+
+.github-profile {
+    margin-top: 55px;
+    padding: 30px 15px;
+    border-top: 1px solid #d6ad6840;
+}
+
+.github-profile p {
+    color: #dddddd;
+    margin-bottom: 10px;
+}
+
+.github-button span {
+    font-size: 18px;
+    margin-right: 7px;
+}
+
+
+/* =========================================
+   11. CONTACT SECTION
+========================================= */
+
+.contact-content {
+    max-width: 650px;
+    margin: auto;
+}
+
+.contact-content h3 {
+    color: var(--pink);
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-content p {
+    color: #dddddd;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.contact-content .email-address {
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: var(--gold);
+}
+
+
+/* =========================================
+   12. FOOTER
+========================================= */
+
+footer {
+    padding: 30px 15px;
+    text-align: center;
+    background: #100e13;
+    color: var(--gold);
+    border-top: 1px solid #d6ad6840;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+footer p:last-child {
+    color: var(--pink);
+}
+
+
+/* =========================================
+   13. ANIMATIONS
+========================================= */
+
+@keyframes floatImage {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+@keyframes slideInLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================
+   14. TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-image {
+        width: 230px;
+        height: 230px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   15. MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 4%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 60px 6%;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .hero-image {
+        width: 210px;
+        height: 210px;
+    }
+
+    .section {
+        padding: 70px 5%;
+    }
+
+    .section h2 {
+        font-size: 30px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 30px 18px;
+    }
+
+    .project-icon {
+        font-size: 38px;
+    }
+
+    .github-profile {
+        margin-top: 35px;
+    }
+
+    .github-button {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   16. EXTRA SMALL SCREENS
+========================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .section h2 {
+        font-size: 26px;
+    }
+
+}
+
+
+/* =========================================
+   17. ACCESSIBILITY
+========================================= */
+
+a:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+
+/* =========================================
+   END OF SERAH'S PORTFOLIO
+   VERSION 3.0
+   DESIGNED WITH LOVE ❤️
+========================================= */
